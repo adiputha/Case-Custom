@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { HTMLAttributes } from "react";
 
@@ -15,21 +16,23 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
       )}
       {...props}
     >
-      <img
+      <Image
         src={
           dark
             ? "/phone-template-dark-edges.png"
             : "/phone-template-white-edges.png"
         }
-        className="pointer-events-none -z-50 select-none"
         alt="phone template"
+        layout="fill"
+        objectFit="cover"
+        className="pointer-events-none -z-50 select-none"
       />
-
       <div className="absolute -z-10 inset-0">
-        <img
+        <Image
           src={imgSrc}
-          className="object-cover"
           alt="phone content"
+          layout="fill"
+          objectFit="cover"
         />
       </div>
     </div>
