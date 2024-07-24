@@ -3,6 +3,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Check, Star } from "lucide-react";
 import Phone from "@/components/Phone"; // Assuming Phone is a custom component
 import { Icons } from "@/components/Icons";
+import { Reviews } from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -145,7 +146,7 @@ export default function Home() {
               <div className="text-lg leading-8">
                 <p>
                   "I love my new case! The quality is amazing and the print is
-                  perfect. I'm so happy with my purchase. Thank you!"
+                  perfect. I am m so happy with my purchase. Thank you!"
                 </p>
               </div>
               <div className="flext gap-4 mt-2">
@@ -197,6 +198,9 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
+        <div className="pt-16">
+                <Reviews/>
+        </div>
       </section>
     </div>
   );
